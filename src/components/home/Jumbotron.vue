@@ -5,11 +5,11 @@
         <div class="col-12 col-md-12 col-lg-8">
           <h1 class="display-4">☪ Islamic Lite</h1>
           <p class="lead">
-            Fulfill Your Islamic Needs Every Day Here. Access Anytime Anywhere,
-            all easier with islamic lite
+            Penuhi Kebutuhan Islami Harian Anda Di Sini. Akses Kapan Saja Di
+            Mana Saja, semuanya lebih mudah dengan islamic lite
           </p>
           <a href="#menu-list" class="btn btn-lg btn-primary shadow-none">
-            Get Started
+            Ayo Mulai
           </a>
         </div>
       </div>
@@ -28,6 +28,7 @@ export default {};
   .display-4,
   .lead {
     font-weight: 500;
+    text-transform: capitalize;
   }
   .btn-primary {
     @include main;

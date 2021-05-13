@@ -89,28 +89,29 @@ export default {
     }
   }
 
+  .col-6 {
+    a {
+      text-decoration: none !important;
+      color: #000;
+    }
+  }
   .pilihan-menu {
     .judul-menu {
       font-weight: 700;
       color: $muda;
     }
     .card-menu {
-      h5 {
-        color: #000;
-        &:hover {
-          text-decoration: none !important;
-        }
-      }
       margin-top: 35px;
-      border: 2px solid #129169;
+      border: 3px solid #129169;
       border-radius: 10px;
       padding: 15px;
       cursor: pointer;
       &:hover {
-        text-decoration: none !important;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
+        background-color: #129169;
+        color: #fff !important;
+        box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 10px 0px;
       }
-      transition: 0.5s all;
+      transition: 0.3s all;
     }
   }
 }

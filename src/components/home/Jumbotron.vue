@@ -21,4 +21,25 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "../../assets/scss/mixins.scss";
+.jumbotron {
+  background-color: #129169;
+  .display-4,
+  .lead {
+    font-weight: 500;
+  }
+  .btn-primary {
+    @include main;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home {
+    .jumbotron {
+      .lead {
+        font-size: 16px;
+      }
+    }
+  }
+}
+</style>

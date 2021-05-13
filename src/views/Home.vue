@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Jumbotron />
-    <div id="menu-list" class="pilihan-menu mt-5">
+    <div id="menu-list" class="pilihan-menu mt-5 mb-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-12 col-lg-12">
@@ -78,17 +78,6 @@ export default {
 .home {
   margin-top: 70px;
 
-  .jumbotron {
-    background-color: #129169;
-    .display-4,
-    .lead {
-      font-weight: 500;
-    }
-    .btn-primary {
-      @include main;
-    }
-  }
-
   .col-6 {
     a {
       text-decoration: none !important;
@@ -109,18 +98,9 @@ export default {
       &:hover {
         background-color: #129169;
         color: #fff !important;
-        box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 10px 0px;
+        box-shadow: rgba(0, 0, 0, 0.75) 0px 10px 15px 0px;
       }
-      transition: 0.3s all;
-    }
-  }
-}
-@media only screen and (max-width: 768px) {
-  .home {
-    .jumbotron {
-      .lead {
-        font-size: 16px;
-      }
+      transition: 0.4s all;
     }
   }
 }

@@ -1,0 +1,15 @@
+$muda: #4aa96c;
+
+@mixin main {
+  &:hover {
+    border: 1px solid #129169;
+    background-color: $muda;
+  }
+  &:focus:active {
+    background-color: $muda;
+    border: 1px solid #129169;
+  }
+  font-weight: 700;
+  border: 1px solid #129169;
+  background-color: $muda;
+}

@@ -23,10 +23,14 @@ export default {};
 
 <style lang="scss" scoped>
 @import "../../assets/scss/mixins.scss";
+
 .jumbotron {
   background-color: #129169;
   .display-4,
   .lead {
+    &:not(.lead) {
+      font-weight: 600;
+    }
     font-weight: 500;
     text-transform: capitalize;
   }
@@ -35,11 +39,12 @@ export default {};
   }
 }
 @media only screen and (max-width: 768px) {
-  .home {
-    .jumbotron {
-      .lead {
-        font-size: 16px;
-      }
+  .jumbotron {
+    .display-4 {
+      font-size: 42px;
+    }
+    .lead {
+      font-size: 16px;
     }
   }
 }

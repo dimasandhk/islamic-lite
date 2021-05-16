@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-md-12 col-lg-12">
-          <h3 class="judul-menu text-center">Pilih Kebutuhan Islamimu</h3>
+          <h2 class="judul-menu text-center">Pilih Kebutuhan Islamimu</h2>
         </div>
       </div>
       <div class="row justify-content-center">

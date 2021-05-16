@@ -23,7 +23,9 @@ export default {};
 
 <style lang="scss" scoped>
 @import "../../assets/scss/mixins.scss";
-
+svg {
+  margin-top: -100px !important;
+}
 .jumbotron {
   background-color: #129169;
   .display-4,

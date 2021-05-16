@@ -46,8 +46,11 @@ export default {
   .btn-primary {
     @include main;
   }
-  border-bottom: 1px solid $muda;
+  border-bottom: 3px solid $tua;
   padding: 15px;
-  background-color: #129169;
+  .is-scrolled {
+    background-color: rgba(18, 145, 105, 0.95);
+  }
+  background-color: $tua;
 }
 </style>

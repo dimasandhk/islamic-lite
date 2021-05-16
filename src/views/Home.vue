@@ -24,22 +24,26 @@
     <div class="kata-penutup">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-12 col-md-12 col-lg-12">
-            <h2 class="kata">
-              بَلِّغُوا عَنِّى وَلَوْ آيَة
-            </h2>
-            <h5>
-              "Sampaikanlah dariku walau hanya satu ayat"
-            </h5>
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="kotak-penutup">
+              <div class="container">
+                <h2 class="kata arab-kata">
+                  بَلِّغُوا عَنِّى وَلَوْ آيَة
+                </h2>
+                <h5>
+                  "Sampaikanlah dariku walau hanya satu ayat"
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="text-center text-muted py-3">
-      <hr />
-      Islamic Lite by Dimas Andhika
-    </footer>
   </div>
+  <footer class="text-center text-light">
+    Islamic Lite by
+    <a href="https://dimasandhk.vercel.app/" target="_blank">Dimas Andhika</a>
+  </footer>
 </template>
 
 <script>
@@ -73,7 +77,7 @@ export default {
 .home {
   padding-top: 71px;
   .quotes-random {
-    background-color: $muda;
+    background-color: $tua;
     color: #fff;
     padding: 50px 0;
     margin-top: 70px;
@@ -85,9 +89,31 @@ export default {
   .kata-penutup {
     padding: 60px 0;
     .kata {
+      :not(.arab-kata) {
+        font-weight: 700 !important;
+      }
       font-weight: 500;
     }
+    .kotak-penutup {
+      border: 2px solid $tua;
+      padding: 20px 0;
+      border-radius: 10px;
+    }
   }
+}
+footer {
+  background-color: $muda;
+  padding: 20px 0;
+  font-weight: 700;
+  a {
+    &:hover {
+      color: $secondary;
+    }
+    color: $secondary;
+  }
+}
+.btn-primary {
+  @include main;
 }
 @media only screen and (max-width: 768px) {
   .arabic {

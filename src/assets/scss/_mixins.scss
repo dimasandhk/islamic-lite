@@ -1,17 +1,19 @@
 $muda: #4aa96c;
 $secondary: #fee37b;
+$tua: #129169;
 
 @mixin main {
   &:hover {
-    border: 1px solid #129169;
-    background-color: $muda;
+    border: 1px solid $tua;
+    background-color: $secondary;
   }
   &:focus:active {
-    background-color: $muda;
-    border: 1px solid #129169;
+    background-color: $secondary;
+    color: #333;
+    border: 1px solid $tua;
   }
   font-weight: 700;
-  border: 1px solid #129169;
+  border: 1px solid $tua;
   background-color: $secondary;
   color: #333;
 }

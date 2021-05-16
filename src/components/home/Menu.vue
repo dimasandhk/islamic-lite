@@ -7,51 +7,19 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
+        <div
+          class="col-6 col-md-4 col-lg-3"
+          v-for="(list, i) of listItem"
+          :key="i"
+        >
+          <router-link :to="list.path">
             <div class="card-menu cd-menu-1 text-center">
-              <img src="../../assets/img/quran.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Al-Quran</h5>
-            </div>
-          </router-link>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
-            <div class="card-menu text-center">
-              <img src="../../assets/img/hadits.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Hadith</h5>
-            </div>
-          </router-link>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
-            <div class="card-menu text-center">
-              <img src="../../assets/img/lighter.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Kisah Nabi</h5>
-            </div>
-          </router-link>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
-            <div class="card-menu text-center">
-              <img src="../../assets/img/allah.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Asmaul Husna</h5>
-            </div>
-          </router-link>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
-            <div class="card-menu text-center">
-              <img src="../../assets/img/praying.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Doa Harian</h5>
-            </div>
-          </router-link>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <router-link to="/">
-            <div class="card-menu text-center">
-              <img src="../../assets/img/quran.webp" alt="" class="w-50" />
-              <h5 class="mt-2">Iqra</h5>
+              <img
+                :src="require(`@/assets/img/${list.src}`)"
+                alt=""
+                class="w-50"
+              />
+              <h5 class="mt-2">{{ list.title }}</h5>
             </div>
           </router-link>
         </div>
@@ -61,7 +29,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    listItem: undefined
+  }),
+  created() {
+    this.listItem = this.$store.state.menuList;
+  }
+};
 </script>
 
 <style lang="scss" scoped>

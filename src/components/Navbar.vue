@@ -1,5 +1,8 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <nav
+    class="navbar fixed-top navbar-expand-lg navbar-dark"
+    :class="isScrolled"
+  >
     <div class="container">
       <router-link class="navbar-brand" to="/">☪ Islamic Lite</router-link>
       <toggle-button></toggle-button>
@@ -25,6 +28,17 @@ export default {
   components: {
     "toggle-button": button,
     "navbar-container": container
+  },
+  computed: {
+    isScrolled() {
+      const scrolled =
+        document.body.scrollTop > 350 ||
+        document.documentElement.scrollTop > 350;
+
+      return {
+        scrolledClass: scrolled
+      };
+    }
   }
 };
 </script>
@@ -48,9 +62,7 @@ export default {
   }
   border-bottom: 3px solid $tua;
   padding: 15px;
-  .is-scrolled {
-    background-color: rgba(18, 145, 105, 0.95);
-  }
+
   background-color: $tua;
 }
 </style>

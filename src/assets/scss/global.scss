@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import "./mixins";
 
 body,
 html {
@@ -8,6 +9,10 @@ html {
 }
 hr {
   background-color: #fff !important;
+}
+
+.form-control {
+  border: 1px solid $tua !important;
 }
 
 .scrolledClass {

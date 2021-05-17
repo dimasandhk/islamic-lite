@@ -19,7 +19,7 @@ export default createStore({
         src: "lighter.webp"
       },
       {
-        path: "/",
+        path: "/asmaul-husna",
         title: "Asmaul Husna",
         src: "allah.webp"
       },
@@ -33,9 +33,8 @@ export default createStore({
         title: "Iqra",
         src: "quran.webp"
       }
-    ]
-  },
-  mutations: {},
-  actions: {},
-  modules: {}
+    ],
+    asmaulPath:
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna"
+  }
 });

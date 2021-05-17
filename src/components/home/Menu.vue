@@ -31,7 +31,7 @@
 <script>
 export default {
   data: () => ({
-    listItem: undefined
+    listItem: null
   }),
   created() {
     this.listItem = this.$store.state.menuList;
@@ -62,7 +62,7 @@ export default {
     &:hover {
       background-color: #129169;
       color: #fff !important;
-      box-shadow: rgba(0, 0, 0, 0.75) 0px 7px 14px 0px;
+      box-shadow: rgba(0, 0, 0, 0.75) 0px 2px 4px 0px;
     }
     transition: 0.4s all;
   }

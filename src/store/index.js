@@ -24,7 +24,7 @@ export default createStore({
         src: "allah.webp"
       },
       {
-        path: "/",
+        path: "/doa-harian",
         title: "Doa Harian",
         src: "praying.webp"
       },
@@ -37,6 +37,8 @@ export default createStore({
     asmaulPath:
       "https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna",
     hadithPath:
-      "https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/"
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/",
+    doaPath:
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/doaharian"
   }
 });

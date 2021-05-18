@@ -9,6 +9,9 @@
         <div class="row justify-content-center mt-3">
           <div class="col-12 col-md-12 col-lg-7">
             <input
+              v-show="listKisah.length > 0"
+              @keydown="searchKisah"
+              v-model="qKisah"
               type="text"
               placeholder="Nama Nabi"
               class="form-control shadow-none"
@@ -19,12 +22,33 @@
     </div>
     <div class="isi-kisah py-5">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" v-if="!qKisah">
           <Loading v-show="listKisah.length == 0" />
           <div
             class="col-12 col-md-12 col-lg-6 mt-4"
             v-for="(kisah, i) of listKisah"
             :key="kisah"
+          >
+            <Card>
+              <h4 class="card-title text-left">
+                {{ kisah.name }}<br />({{ kisah.tmp }})
+              </h4>
+              <p class="card-subtitle mt-2 text-left">
+                {{ kisah.description.substring(0, 250) }} ...<br />
+                <router-link
+                  :to="'/kisah-nabi/detail?id=' + i"
+                  class="mt-3 text-left"
+                  >Detail</router-link
+                >
+              </p>
+            </Card>
+          </div>
+        </div>
+        <div class="row justify-content-center" v-else>
+          <div
+            class="col-12 col-md-12 col-lg-6 mt-4"
+            v-for="(kisah, i) of searchRes"
+            :key="i"
           >
             <Card>
               <h4 class="card-title text-left">
@@ -53,7 +77,9 @@ export default {
     Card
   },
   data: () => ({
-    listKisah: []
+    listKisah: [],
+    qKisah: "",
+    searchRes: []
   }),
   async created() {
     const kisah = await this.getKisah();
@@ -64,6 +90,14 @@ export default {
       return fetch(this.$store.state.kisahPath)
         .then((res) => res.json())
         .then((res) => res.result);
+    },
+    searchKisah() {
+      this.searchRes.length = 0;
+      const result = this.listKisah.filter(({ name }) =>
+        name.toLowerCase().includes(this.qKisah.toLowerCase())
+      );
+
+      result.forEach((kisah) => this.searchRes.push(kisah));
     }
   }
 };

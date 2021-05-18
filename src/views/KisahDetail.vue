@@ -79,6 +79,7 @@ export default {
     font-weight: 700;
   }
   .btn-primary {
+    border: none !important;
     @include main;
   }
   padding: 71px 0 70px 0;

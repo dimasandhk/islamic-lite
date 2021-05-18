@@ -96,7 +96,6 @@ export default {
       const filtered = hadith.filter((list) => list.number <= 20);
 
       this.result.push(filtered);
-      console.log(JSON.parse(JSON.stringify(this.result)));
     });
   },
   methods: {
@@ -108,7 +107,6 @@ export default {
     changeSelected() {
       const selectBox = document.querySelector(".select-nama");
       this.selected = selectBox.options[selectBox.selectedIndex].value;
-      console.log(this.selected);
     }
   }
 };

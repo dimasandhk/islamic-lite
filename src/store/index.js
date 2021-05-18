@@ -14,7 +14,7 @@ export default createStore({
         src: "hadits.webp"
       },
       {
-        path: "/",
+        path: "/kisah-nabi",
         title: "Kisah Nabi",
         src: "lighter.webp"
       },
@@ -39,6 +39,8 @@ export default createStore({
     hadithPath:
       "https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/",
     doaPath:
-      "https://islamic-api-indonesia.herokuapp.com/api/data/json/doaharian"
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/doaharian",
+    kisahPath:
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/kisahnabi"
   }
 });

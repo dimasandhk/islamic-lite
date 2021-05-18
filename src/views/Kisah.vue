@@ -1,0 +1,93 @@
+<template>
+  <div class="kisah-nabi">
+    <div class="kisah-header text-center text-light py-5">
+      <div class="container">
+        <h3 class="judul-api mb-3">Kisah Nabi</h3>
+        <router-link to="/" class="btn btn-primary shadow-none"
+          >Kembali</router-link
+        >
+        <div class="row justify-content-center mt-3">
+          <div class="col-12 col-md-12 col-lg-7">
+            <input
+              type="text"
+              placeholder="Nama Nabi"
+              class="form-control shadow-none"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="isi-kisah py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <Loading v-show="listKisah.length == 0" />
+          <div
+            class="col-12 col-md-12 col-lg-6 mt-4"
+            v-for="(kisah, i) of listKisah"
+            :key="kisah"
+          >
+            <Card>
+              <h4 class="card-title text-left">
+                {{ kisah.name }}<br />({{ kisah.tmp }})
+              </h4>
+              <p class="card-subtitle mt-2 text-left">
+                {{ kisah.description.substring(0, 250) }} ...<br />
+                <router-link
+                  :to="'/kisah-nabi/detail?id=' + i"
+                  class="mt-3 text-left"
+                  >Detail</router-link
+                >
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Card from "../components/Card";
+export default {
+  components: {
+    Card
+  },
+  data: () => ({
+    listKisah: []
+  }),
+  async created() {
+    const kisah = await this.getKisah();
+    kisah.forEach((list) => this.listKisah.push(list));
+  },
+  methods: {
+    getKisah() {
+      return fetch(this.$store.state.kisahPath)
+        .then((res) => res.json())
+        .then((res) => res.result);
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/scss/mixins.scss";
+.kisah-nabi {
+  .kisah-header {
+    background-color: $tua;
+    .btn-primary {
+      @include main;
+    }
+  }
+
+  .isi-kisah {
+    .card-title {
+      font-weight: 700;
+    }
+    a {
+      color: #333;
+      font-weight: 700;
+    }
+  }
+  padding: 71px 0 0 0;
+}
+</style>

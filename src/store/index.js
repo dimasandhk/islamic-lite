@@ -29,9 +29,9 @@ export default createStore({
         src: "praying.webp"
       },
       {
-        path: "/",
+        path: "/iqra",
         title: "Iqra",
-        src: "quran.webp"
+        src: "iqra.png"
       }
     ],
     asmaulPath:

@@ -26,6 +26,11 @@ const routes = [
     path: "/doa-harian",
     name: "Doa Harian",
     component: () => import("../views/Doa.vue")
+  },
+  {
+    path: "/iqra",
+    name: "Iqra",
+    component: () => import("../views/Iqra.vue")
   }
 ];
 

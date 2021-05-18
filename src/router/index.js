@@ -16,6 +16,11 @@ const routes = [
     path: "/asmaul-husna",
     name: "Asmaul",
     component: () => import("../views/Asmaul.vue")
+  },
+  {
+    path: "/hadith",
+    name: "Hadith",
+    component: () => import("../views/Hadits.vue")
   }
 ];
 

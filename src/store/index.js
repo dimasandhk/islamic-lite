@@ -9,7 +9,7 @@ export default createStore({
         src: "quran.webp"
       },
       {
-        path: "/",
+        path: "/hadith",
         title: "Hadith",
         src: "hadits.webp"
       },
@@ -35,6 +35,8 @@ export default createStore({
       }
     ],
     asmaulPath:
-      "https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna"
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna",
+    hadithPath:
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/"
   }
 });

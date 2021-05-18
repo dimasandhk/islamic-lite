@@ -108,10 +108,6 @@ export default {
     margin-top: 30px;
   }
   .header-asmaul {
-    .judul-api {
-      font-weight: 700;
-      color: #fff;
-    }
     .btn-primary {
       @include main;
     }

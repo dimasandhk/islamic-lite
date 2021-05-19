@@ -13,6 +13,7 @@ export default {};
 <style lang="scss" scoped>
 @import "../assets/scss/mixins.scss";
 .card {
+  color: #333 !important;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 24px 0px;
   text-align: center;
   height: 100%;

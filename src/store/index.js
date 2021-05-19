@@ -4,7 +4,7 @@ export default createStore({
   state: {
     menuList: [
       {
-        path: "/",
+        path: "/quran",
         title: "Al-Quran",
         src: "quran.webp"
       },
@@ -41,6 +41,7 @@ export default createStore({
     doaPath:
       "https://islamic-api-indonesia.herokuapp.com/api/data/json/doaharian",
     kisahPath:
-      "https://islamic-api-indonesia.herokuapp.com/api/data/json/kisahnabi"
+      "https://islamic-api-indonesia.herokuapp.com/api/data/json/kisahnabi",
+    quranPath: "https://islamic-api-indonesia.herokuapp.com/api/data/json/quran"
   }
 });

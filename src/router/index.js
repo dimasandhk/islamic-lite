@@ -35,6 +35,15 @@ const routes = [
   {
     path: "/kisah-nabi/detail",
     component: () => import("../views/KisahDetail.vue")
+  },
+  {
+    path: "/quran",
+    name: "Quran",
+    component: () => import("../views/Quran.vue")
+  },
+  {
+    path: "/quran/baca",
+    component: () => import("../views/QuranBaca.vue")
   }
 ];
 

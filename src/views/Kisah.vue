@@ -47,8 +47,8 @@
         <div class="row justify-content-center" v-else>
           <div
             class="col-12 col-md-12 col-lg-6 mt-4"
-            v-for="(kisah, i) of searchRes"
-            :key="i"
+            v-for="kisah of searchRes"
+            :key="kisah"
           >
             <Card>
               <h4 class="card-title text-left">
@@ -57,7 +57,7 @@
               <p class="card-subtitle mt-2 text-left">
                 {{ kisah.description.substring(0, 250) }} ...<br />
                 <router-link
-                  :to="'/kisah-nabi/detail?id=' + i"
+                  :to="'/kisah-nabi/detail?id=' + kisah.id"
                   class="mt-3 text-left"
                   >Detail</router-link
                 >
@@ -82,8 +82,16 @@ export default {
     searchRes: []
   }),
   async created() {
+    let i = -1;
     const kisah = await this.getKisah();
-    kisah.forEach((list) => this.listKisah.push(list));
+    kisah.forEach((list) =>
+      this.listKisah.push({
+        id: ++i,
+        name: list.name,
+        description: list.description,
+        tmp: list.tmp
+      })
+    );
   },
   methods: {
     getKisah() {

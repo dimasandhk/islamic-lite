@@ -102,7 +102,7 @@ export default {
   }
 }
 footer {
-  background-color: $muda;
+  background-color: $tua;
   padding: 20px 0;
   font-weight: 700;
   a {

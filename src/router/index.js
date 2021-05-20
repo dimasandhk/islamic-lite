@@ -34,7 +34,7 @@ const routes = [
   },
   {
     path: "/kisah-nabi/detail",
-    component: () => import("../views/KisahDetail.vue")
+    component: () => import("../views/details/KisahDetail.vue")
   },
   {
     path: "/quran",
@@ -43,7 +43,7 @@ const routes = [
   },
   {
     path: "/quran/baca",
-    component: () => import("../views/QuranBaca.vue")
+    component: () => import("../views/details/QuranBaca.vue")
   }
 ];
 

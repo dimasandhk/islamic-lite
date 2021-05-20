@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins.scss";
+@import "../../assets/scss/mixins.scss";
 .kisah-detail {
   .card {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 24px 0px;

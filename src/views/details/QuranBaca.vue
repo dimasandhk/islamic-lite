@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import Card from "../components/Card.vue";
+import Card from "../../components/Card.vue";
 export default {
   components: {
     Card
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins.scss";
+@import "../../assets/scss/mixins.scss";
 .quran-baca {
   .tafsir {
     font-weight: 500;

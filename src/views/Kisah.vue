@@ -3,9 +3,7 @@
     <div class="kisah-header text-center text-light py-5">
       <div class="container">
         <h3 class="judul-api mb-3">Kisah Nabi</h3>
-        <router-link to="/" class="btn btn-primary shadow-none"
-          >Kembali</router-link
-        >
+        <back-router></back-router>
         <div class="row justify-content-center mt-3">
           <div class="col-12 col-md-12 col-lg-7">
             <input
@@ -116,9 +114,6 @@ export default {
 .kisah-nabi {
   .kisah-header {
     background-color: $tua;
-    .btn-primary {
-      @include main;
-    }
   }
 
   .isi-kisah {

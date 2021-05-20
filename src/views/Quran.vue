@@ -3,9 +3,7 @@
     <div class="quran-header py-5 text-center text-light">
       <div class="container">
         <h3 class="judul-api mb-3">Alquran</h3>
-        <router-link to="/" class="btn btn-primary shadow-none">
-          Kembali
-        </router-link>
+        <back-router></back-router>
         <div class="row justify-content-center mt-3">
           <div class="col-12 col-md-12 col-lg-7">
             <input
@@ -136,9 +134,6 @@ export default {
 @import "../assets/scss/mixins.scss";
 .quran {
   .quran-header {
-    .btn-primary {
-      @include main;
-    }
     background-color: $tua;
   }
 

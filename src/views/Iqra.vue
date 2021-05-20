@@ -3,9 +3,7 @@
     <div class="iqra-header text-center py-5 text-light">
       <div class="container">
         <h3 class="judul-api mb-3">PDF Iqra 1 - 6</h3>
-        <router-link to="/" class="btn btn-primary shadow-none"
-          >Kembali</router-link
-        >
+        <back-router></back-router>
       </div>
     </div>
     <div class="isi-iqra py-5">
@@ -42,9 +40,6 @@ export default {
 .iqra {
   .iqra-header {
     background-color: $tua;
-    .btn-primary {
-      @include main;
-    }
   }
   .isi-iqra {
     a {
